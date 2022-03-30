@@ -13,7 +13,7 @@
 #' fitting a statistical model, and the "predicting" stage is then used for making predictions
 #' on new data.
 #'
-#' To perform training, the `$train()` function is called which takes inputs and transforms them, while simultaneously storing information
+#' To perform training, the `$train()` function is called which takes inputs and transforms them, while simultaneously storing informationr
 #' in its `$state` slot. For prediction, the `$predict()` function is called, where the `$state` information can be used to influence the transformation
 #' of the new data.
 #'
@@ -542,7 +542,7 @@ evaluate_multiplicities = function(self, unpacked, evalcall, instate) {
     # 'result' is just an empty list missing the necessary info about output channels.
     # (not necessary for 'state', because it is a list of states, whereas 'output' is a
     # list (entry for each input multiplicity entry) of lists (entry for each output channel) of outputs
-    sapply(self$output$name, function(x) as.Multiplicity(list()), simplify = FALSE)
+    sapply(self$output$name, function(x) as.Multiplicity(list()), simplify = FALSE 
   } else {
 
     map(transpose_list(map(result, "output")), as.Multiplicity)
